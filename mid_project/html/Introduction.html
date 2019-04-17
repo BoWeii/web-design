@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+   <head>
+		<title>國立台北科技大學 資訊工程系</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- 引入 Bootstrap -->
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
+		<link href="../css/bootstrap.css" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery.js"></script> 
+		<script src="../js/bootstrap.bundle.js"></script>
+		<script src="../js/main.js"></script>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.7/dist/css/bootstrap-select.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.7/dist/js/bootstrap-select.min.js"></script>
+		<style>
+			body {
+				position: relative;
+			}
+			ul.nav-pills {
+				margin-top:5vh;
+				 margin-right: 14vh; 
+			}
+			header h1{
+    		letter-spacing: 20px;
+    		color: black;
+			}
+			
+			.navFixed {    
+				z-index:3;  
+				position: fixed;      
+				top:0px;
+				opacity: 0.94;
+				transition: opacity .5s ease-out;  
+			}
+			.card{
+				margin-top:5vh;
+				margin-bottom:5vh;
+			}
+			body #content h1{
+				color: #24B1CE;
+				margin-bottom: 30px;
+			}
+			body #content h4{
+				color: #C6378A;
+			}
+			body #content h5{
+				color: #C6378A;
+				margin-bottom: 10px;
+			}
+		
+	
+		</style>
+		<script type="text/javascript">
+			$(function() {
+			  $(window).scroll(function() {
+				if ($(this).scrollTop() > 450)  {          /* 要滑動到選單的距離 */
+				   $('.nav-pills').addClass('navFixed');   /* 幫選單加上固定效果 */
+				   $('#item1').css('background-color','');
+				   $('#item1').css('color','');
+				} else {
+				  $('.nav-pills').removeClass('navFixed'); /* 移除選單固定效果 */
+				  $('#item1').css('background-color','#0F83FF');
+				  $('#item1').css('color','white');
+				 
+				}
+			  });
+			});
+
+			</script>   
+			
+   </head>
+   <body data-spy="scroll" data-target="#myScrollspy" data-offset="1">
+		<div class ="container-fluid" >
+				<div class="row justify-content-center" style="background: url(../img/nav.jpeg) no-repeat center center /100%">
+				   <header> 
+					  <div class="nav center-vertical">
+						 <div class="container">
+							<div class="row justify-content-around mt-2"><!------改-------><a href="https://www.ntut.edu.tw/" style="text-decoration: none"><h1 class="school"><font face="Noto Sans TC">國立台北科技大學</font></h1></a></div><!------改------->
+                      <div class="row justify-content-center mb-2"><!------改-------><a href="./home_page.html" style="text-decoration: none"><h3 class="csie"><font face="Noto Sans TC">@資訊工程系</font></h3></a></div><!------改------->
+							<div class="d-none d-lg-block">
+							<div class="d-flex justify-content-between">
+								<button type="button" class="btn btn-outline-dark" onclick="location.href='./Introduction.html'" >系所介紹</button>
+								<button type="button" class="btn btn-outline-dark" onclick="location.href='./teacher.html'">系所成員</button>
+								<button type="button" class="btn btn-outline-dark" onclick="location.href='./課程資訊.html'">課程資訊</button>
+								<button type="button" class="btn btn-outline-dark" onclick="location.href='./入學資訊.html'">招生訊息</button>
+								<button type="button" class="btn btn-outline-dark" onclick="location.href='./lab.html'">實驗室</button>
+								  </div>
+							</div>
+							</div>
+					  </div>
+				   </header>
+				</div>
+			 </div>
+			 <button id="float-button" type="button" class="btn btn-dark d-lg-none" data-toggle="collapse" data-target="#float-button-data"><i class="fas fa-plus"></i></button>
+			 <div id="float-button-data" class="collapse d-lg-none">
+				<!------改------->
+				<a href="#" id="about"><i class="fas fa-award fa-2x mb-4 menu"></i></a><br>
+				<a href="#" id="teacher"><i class="fas fa-user-tie fa-2x mb-4 menu"></i></a><br>
+				<a href="#" id="course"><i class="fas fa-book-open fa-2x mb-4 menu"></i></a><br>
+				<a href="#" id="info"><i class="fas fa-university fa-2x mb-4 menu"></i></a><br>
+				<a href="#" id="lab"><i class="fas fa-flask fa-2x mb-4 menu"></i></a><br>
+				<!------改------->
+		</div>
+		<div class="container">
+			<div class="row">
+				<nav class="col-sm-3 col-1" id="myScrollspy">
+					<ul class="nav nav-pills flex-column">
+						<li class="nav-item" >
+							<a class="nav-link" href="#section1" id="item1">沿革與現況</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#section2" >發展特色</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#section3" >教育目標</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="col-sm-9 col-11" id="content">
+					<div id="section1">
+						<div class="card">
+							<div class="card-body">
+								<h1 class=".display-3 font-weight-bold">沿革與現況</h1>
+								<p>
+									&emsp;&emsp;本系創立於民國89年，初期僅招收碩士班研究生。90學年度成立大學部二年制(二技)，招收專科畢業生。93學年度由二技換班為四技，招收高中生及高職生，同時停招二技。94學年度設立博士班，開始招收博士班研究生。
+								</p>
+								<br>
+								<p>
+									&emsp;&emsp;本系目前有17位專任教師，均具資訊相關領域博士學位。對學生的重視為本系最重要的核心價值，因此系上教師均富熱忱的教學態度，並給予學生份量充足的課程作業及嚴謹的成績考核，藉此訓練與培育學生專業技能，並佐以雙導師制度提供學生專業選課輔導，協助學生適才適性發展。
+								</p>
+								<br>
+								<p>
+									&emsp;&emsp;本系課程規劃參照ACM/IEEE Computing Curricula，與全球同步。課程設計以「語言與軟體」、「數學與演算」及「計算機系統」等三大基礎領域為主軸，並規劃「多媒體系統」、「網路系統」與「軟體系統」等三個專業領域，提供基礎理論與實作應用兼備的訓練與發展環境。研究所課程以物件導向程式設計為基礎，再輔以軟體工程學程及本系特色研究領域的進階課程，將論文導向各專業研究領域。
+								</p>
+								<br>
+								<p>
+									&emsp;&emsp;隨著資訊科技的演進及進展，本系教學與研究亦不斷的調整方向，期以最新資訊技術培育及提供青年學子最佳的學習場所，歡迎有志青年踴躍加入本系行列，一同為台灣資訊產業的發展努力。
+								</p>	
+								<br>
+							</div>
+						</div>
+					</div>
+		
+					<div id="section2">
+						<div class="card">
+							<div class="card-body">
+									<h1 class=".display-3 font-weight-bold">發展特色</h1>
+								<p>
+									&emsp;&emsp;本系以<b>「多媒體系統(Multimedia Systems)」</b>、<b>「網路系統(Network Systems)」</b>與<b>「軟體系統(Software Systems)」</b>等三大特色研究領域為核心，發展兼具實用性與前瞻性的資訊科技，以培養能直接投入資訊產業的科技人才為教學目標。這三大特色領域是數位內容產業所需的核心技術，也是資訊應用服務產業中最關鍵的技術，更是企業藉以提升效率、產能及營運能力的利器。因此本系的教學與研究全力配合上述的發展目標，著重於：
+								</p>
+								<br>
+								<p>
+									(1) 研發以應用為導向的理論與技術<br>
+									(2) 強調訓練系統設計與實務並重之技能，以及<br>
+									(3) 尋求與業界需求密切結合的專案及相關研究計畫。<br>
+								</p>
+								<br>
+								<h4 class="subtitle">多媒體系統</h4>
+								<br>
+								<p>
+									(1) 多媒體系統與傳輸：
+								</p>
+								<p>
+									&emsp;&emsp;在過去數年間，本系已在多媒體尖端技術研發累積相當成果，除了執行科技部智慧聯網電視多年期整合型計畫，並已與佐臻科技、億像科技、致伸科技、聲寶公司、東元電機等公司，與資策會、工研院、及教育部體育署等單位建立長期合作關係。研發的核心技術包括視訊編碼與傳輸技術、智慧聯網電視、電腦視覺技術、運動資訊系統、汽車電子與視覺安全輔助系統等。未來將考量物聯網趨勢下的服務與應用模式，整合各項聯網裝置與智慧終端，研發具競爭優勢的技術，並創造優質的使用者經驗。
+								</p>	
+								<br>
+								<p>
+									(2) 嵌入式系統與穿戴式技術：
+								</p>
+								<p>
+									&emsp;&emsp;近年來嵌入式系統的蓬勃發展與效能演進，現在已經成為我們現在生活中的一部份，並且大大的改進了我們的生活體驗。常見嵌入式系統的應用有：MP3撥放機、數位機上盒(Set-top Box)、數位視訊錄影機(DVR)、遊戲機、家庭網路閘道器(Home Gateway)、網路電話(VoIP)、智慧型手機(smart phone)、穿戴式裝置（Wearable devices）、智慧眼鏡（Smart Glass）、行車輔助系統（Driver Assistance Systems）等。這些實現在生活中的嵌入式系統的應用，可充分應用於家電產品，並藉由其運算能力的強化，不僅已可達成數位家庭(Digit Home)或建立多媒體中心(Media Center)、以及普及運算(Pervasive Computing)，現在更可將高效能多媒體運算應用於可穿戴式裝置，包含各種智慧眼鏡、智慧手錶、智慧衣服、與智慧照護系統等廣泛應用，使嵌入式系統之應用完全融入個人日常生活中。基於此，本系將致力研究整合嵌入式系統與多媒體、智慧終端、和物聯網等應用技術，為資通訊科技生活化培養核心的技術人才。
+								</p>	
+								<br>
+								<p>
+									(3) 電腦圖學與資料可視化：
+								</p>
+								<p>
+									&emsp;&emsp;計算機圖學技術蓬勃發展，研究議題包含：電腦動畫、電腦遊戲、虛擬實境、互動介面、建模技術等。使用演繹建模技術，分析圖樣資料檔，設計形狀文法規則，接著進行構形與形狀分析，通過幾何處理進行互動式形狀編輯，正確性分析修正。得以創新設計，結合工業級三維成型機，透過3D列印進行設計實體化的驗證，開發高階三維繪圖硬體與軟體，藉此培養兼具資訊科技與設計能力。從巨量資料中分析出有用之資訊，資料數據可視化技術扮演舉足輕重的角色。研究主題包含：資料模型與影像模型、視覺感知與認知、資料可視化過程處理、空間感知、空間資料顯示、色彩使用與原理、使用解介面設計、互動模式、資料瀏覽與引導找尋、多變數多維度資料、樹狀與圖示、層級架構展現、複雜關係呈現、視覺化設計評估。
+								</p>	
+								<br>
+								<h4 class="subtitle">網路系統</h4>
+								<br>
+								<p>
+									(1) 無線及寬頻網路系統：
+								</p>
+								<p>
+									&emsp;&emsp;本系網路專業師資組成「無線及寬頻網路系統」研發團隊，專研行動計算、感測網路與物聯網系統、光學網路架構與群播機制、聯網電視影音傳輸及CDN/NPVR技術、寬頻無線通訊網路架構與運用、VoIP應用系統設計與實現、RFID定位追蹤及應用設計、網際網路電信監察、及通訊網路資源配置與效能評估等相關研究主題，進行理論探討或實務設計。並透過研究計畫及產學合作的執行，奠定學生理論與實務兼具的厚實基礎。
+								</p>	
+								<p>
+									(2) 網際網路應用：
+								</p>
+								<p>
+									&emsp;&emsp;網際網路應用系統架構於「雲端運算」、「身份識別與存取」、「資料服務」、「企業流程」、「應用程式開發」等後端伺服技術，與「Web網頁」、「App行動應用」等前端使用者介面技術，涵蓋層面既深且廣。因此，選擇一個產品線完整且技術研發能力雄厚的平台供應商作為合作的對象是必要的。本系長期與IBM公司、微軟公司、Oracle公司等建立良好的產學合作關係，進行網際網路基礎架構與應用系統關鍵技術的研究開發，並承接產業界委託之研發計劃案。近期，臺北科技大學已聘請美國微軟公司Murray Vince總經理擔任榮譽國際講座教授。在中長程的發展上，除持續接受業界產學合作案之外，並計劃進一步與「IBM大中華區軟體研發中心」及「微軟創新中心」建立更緊密的技術合作關係。藉由創新研發成果，累積技術經驗及智慧資產，確保本系在網際網路應用系統研發領域裡的領先地位。
+								</p>	
+								<br>
+								<p>
+									(3) 社群網路與資料探勘及管理：
+								</p>
+								<p>
+									&emsp;&emsp;網際網路及Web技術除了提供傳統資料共享及搜尋服務之外，隨著智慧型行動裝置的普及和社群媒體的快速發展，社群網路已逐漸成為使用者主要互動交流的平台。社群使用者發布的訊息，具有即時、大量、多樣等巨量資料的特性，必須即時從大量簡短雜亂無章的資料中，判斷訊息的可信度，並過濾不當內容，才能有效進行分析。此部分研究運用資料探勘、社群網路分析、以及社群媒體探勘技術，並結合雲端分散式運算架構，以有效進行社群網路使用者的行為以及互動內容的即時分析。此外，網路型態的變化亦衍生出不同的計算環境，在這些新興的計算環境，如行動計算與雲端運算中，如何有效管理資料以提供諸如同儕網路應用、適地性服務與資料廣播服務等網路應用服務技術亦是本系的研究課題之一。
+								</p>	
+								<br>
+								<h4 class="subtitle">軟體系統</h4>
+								<br>
+								<p>
+									(1) 軟體技術：
+								</p>
+								<p>
+									&emsp;&emsp;各領域應用軟體之發展均植基於軟體技術能力，在軟體技術研究方面，本系著重在軟體工程技術與實務，涵蓋開發流程、需求分析、系統設計、程式設計、測試維護、系統整合、專案規劃管理、團隊合作、輔助工具應用等，以期能發展出高品質、合乎使用者需求之實際可用的軟體為目的。為深入軟體技術研究，累積實務經驗，近年來本系朝向遊戲框架、持續整合工具、敏捷開發流程工具、網頁及雲端測試工具，以及測試服務等發展，透過開發大型軟體工具與服務，實際應用與研發軟體工程相關技術，以因應各個領域與產業界軟體發展的需求。目前已有多項衍生成果，範圍包含典範科大計畫、科技部整合型計畫、教育部軟體人才培育計畫、學生校外軟體競賽、產學合作與技術轉移、 敏捷開發流程導入、軟體測試服務、軟體工程相關教育訓練等，並獲得學界與業界的肯定。
+								</p>	
+								<br>
+								<p>
+									(2) 分散式計算：
+								</p>
+								<p>
+									&emsp;&emsp;除典型的網路應用、科學計算所需的分散式計算技術之外，本系發展以人工智慧為基礎的分散式系統的研究，建立以Agent與Thin- Client技術為前緣，利用本校已建立之大型主機為中樞，結合具叢集計算能力的大型分散式系統，並輔以資料分析及資料探勘技術，進而建立功能強大且具有彈性的智慧型分散式系統，以因應業界日益複雜的計算需求。 本系獲得典範科大經費、校友捐資、以及科技部整合型計畫經費，陸續建置完成具高規格軟硬體系統的雲端運算實驗室，以提供軟體測試工廠建置手機APP測試環境以及雲端效能測試平台，並執行多項產學合作與技術轉移。該實驗室亦做為本系開設雲端運算與運用等課程時，提供學生資料科學與大數據分析等實習場所，藉以提升本系學生實作能力及增加就業競爭力。
+								</p>	
+								<br>
+							</div>
+						</div>
+					</div>        
+					<div id="section3">
+						<div class="card">
+							<div class="card-body">
+									<h1 class=".display-3 font-weight-bold">教育目標</h1>
+								<p>
+									&emsp;&emsp;以本校與電資學院之教育目標為基礎，同時參酌社會期許與配合政府政策，以培育出具有良好專業素養及健全人格的社會人才，並做為本系修業規定與授課實況之依據，訂定本系教育目標如下：
+								</p>
+								<p>
+									(1)	專業知識：培育學生具備資訊工程專業知識。<br>
+									(2)	技術扎根：培育學生具備紮實的實務技能。<br>
+									(3)	社會關懷：培育學生認識資訊科技對社會之影響與責任。<br>
+									(4)	國際視野：培育學生瞭解資訊科技發展與全球產業脈動。<br>
+									(5)	終身學習：培育學生習於自我充實，以面對資訊科技快速變化的挑戰。<br>
+								</p>
+								<br>
+								<h5 class="subtitle">本系希望大學部學生具備的核心能力為：</h5>
+								<p>
+									(1) 具備運用資訊、數學之能力，並能充分溝通與表達。<br>
+									(2) 擁有程式語言、邏輯演算、及電腦系統之專業知識。<br>
+									(3) 能運用軟體工具解決問題。<br>
+									(4) 能分析、設計、開發、整合、測試、與評估資訊系統。<br>
+									(5) 具備良好溝通與團隊合作之能力。<br>
+									(6) 具備專題研究、撰寫報告及成果簡報之能力。<br>
+									(7) 具備校外實習經驗，深刻瞭解資訊產業脈動及相關研發議題。<br>
+									(8) 具備自我學習能力，以面對資訊技術的快速變化。<br>
+									(9) 可以體認資訊科技對於社會、教育、經濟、文化等的影響與責任。<br>
+									(10) 尊重學術倫理、工程倫理、及智慧財產權。<br>
+								</p>
+								<br>
+								<h5 class="subtitle">本系希望研究所學生具備的核心能力為：</h5>
+								<p>
+									(1) 具備運用資訊、數學之能力，並能充分溝通與表達。<br>
+									(2) 擁有軟體、網路、多媒體與嵌入式系統之資工專業知識，並至少專精其一。<br>
+									(3) 能分析、設計、實作、整合、測試、與評估資訊系統。<br>
+									(4) 在跨領域團隊中，具備合作協調之能力，並能管理團隊。<br>
+									(5) 具備策劃及執行研究計畫之能力，並能撰寫論文及進行簡報。<br>
+									(6) 具備創新思考、獨立研究、及解決問題之能力。<br>
+									(7) 能分析資訊產業脈動，並能評估相關研發議題之進展。<br>
+									(8) 具備自我學習能力，以面對資訊技術的快速變化。<br>
+									(9) 認識資訊科技對於社會的影響，並承擔相關責任。<br>
+									(10) 尊重學術倫理、工程倫理、及智慧財產權。<br>
+								</p>
+								<br>
+							</div>
+						</div>
+					</div>
+                </div>
+			</div>
+		</div>
+   </body>
+   <div>
+         
+		<footer id="footer" class="bg-dark text-white container-fluid">
+
+				  <div class="row justify-content-center align-items-center ">
+					 <div class="d-none d-lg-block">
+					 <div class="p-4 col">　聯絡電話：(02)2771-2171 轉 4200</div>
+					 </div>
+					 <div class="p-2 col-xs-12"><a href="mailto:wwwcsie@ntut.edu.tw"><i class="far fa-envelope fa-2x foot"></i></a></div>
+					 <div class="p-2 col-xs-12"><a href="https://www.instagram.com/ntutcsientut/?hl=zh-tw" target="_blank"><i class="fab fa-instagram fa-2x foot"></i></a></div>
+					 <div class="p-2 col-xs-12"><a href="https://www.facebook.com/ntutcsieFB/" target="_blank"><i class="fab fa-facebook-square fa-2x foot"></i></i></a></div>
+		  </footer>
+		</div>
+</html>

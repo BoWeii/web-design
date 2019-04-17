@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>國立台北科技大學 資訊工程系</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- 引入 Bootstrap -->
+      
+      <link rel="stylesheet" type="text/css" href="../css/style.css">
+      <link href="../css/bootstrap.css" rel="stylesheet">
+      <script src="https://code.jquery.com/jquery.js"></script> 
+      <script src="../js/bootstrap.bundle.js"></script>
+      <script src="../js/main.js"></script>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.7/dist/css/bootstrap-select.min.css">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.7/dist/js/bootstrap-select.min.js"></script>
+   </head>
+   <body >
+         <div class ="container-fluid" >
+            <div class="row justify-content-center" style="background: url(../img/nav.jpeg) no-repeat center center /100%">
+               <header> 
+                  <div class="nav center-vertical">
+                     <div class="container">
+                      <div class="row justify-content-around mt-2"><!------改-------><a href="https://www.ntut.edu.tw/" style="text-decoration: none"><h1 class="school"><font face="Noto Sans TC">國立台北科技大學</font></h1></a></div><!------改------->
+                      <div class="row justify-content-center mb-2"><!------改-------><a href="./home_page.html" style="text-decoration: none"><h3 class="csie"><font face="Noto Sans TC">@資訊工程系</font></h3></a></div><!------改------->
+                        <div class="d-none d-lg-block">
+                        <div class="d-flex justify-content-between">
+                          <button type="button" class="btn btn-outline-dark" onclick="location.href='./Introduction.html'" >系所介紹</button>
+                          <button type="button" class="btn btn-outline-dark" onclick="location.href='./teacher.html'">系所成員</button>
+                          <button type="button" class="btn btn-outline-dark" onclick="location.href='./課程資訊.html'">課程資訊</button>
+                          <button type="button" class="btn btn-outline-dark" onclick="location.href='./入學資訊.html'">招生訊息</button>
+                          <button type="button" class="btn btn-outline-dark" onclick="location.href='./lab.html'">實驗室</button>
+                              </div>
+                        </div>
+                        </div>
+                  </div>
+               </header>
+            </div>
+         </div>
+         <button id="float-button" type="button" class="btn btn-dark d-lg-none" data-toggle="collapse" data-target="#float-button-data"><i class="fas fa-plus"></i></button>
+         <div id="float-button-data" class="collapse d-lg-none">
+          <a href="#" id="about"><i class="fas fa-award fa-2x mb-4 menu"></i></a><br>
+          <a href="#" id="teacher"><i class="fas fa-user-tie fa-2x mb-4 menu"></i></a><br>
+          <a href="#" id="course"><i class="fas fa-book-open fa-2x mb-4 menu"></i></a><br>
+          <a href="#" id="info"><i class="fas fa-university fa-2x mb-4 menu"></i></a><br>
+          <a href="#" id="lab"><i class="fas fa-flask fa-2x mb-4 menu"></i></a><br>
+         </div>
+         <div class="container ">
+          <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 lab ">
+              <div class="pic">
+                <img src="../img/int.jpg " class="rounded-circle" />
+              </div>
+              <div class="imformation">
+                <p><a href="#">智慧型系統實驗室</a></p>
+                <p>郭忠義</p>
+                <p>科研大樓1221室</p>
+                <p>分機號碼4261</p>
+              </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 lab ">
+              <div class="pic">
+                <img src="../img/cal.jpg "class="rounded-circle" />
+              </div>
+              <div class="imformation">
+                <p><a href="#">應用計算實驗室</a></p>
+                <p>劉傳銘</p>
+                <p>科研大樓1226室</p>
+                <p>分機號碼4262</p>
+              </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 lab ">
+              <div class="pic">
+                <img src="../img/fox.jpg "class="rounded-circle"/>
+              </div>
+              <div class="imformation">
+                <p><a href="#">軟體系統實驗室</a></p>
+                <p>鄭有進、 謝金雲</p>
+                <p>科研大樓1321室</p>
+                <p>分機號碼4263</p>
+              </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 lab ">
+              <div class="pic">
+               <img src="../img/look.jpg " class="rounded-circle"/>
+              </div>
+              <div class="imformation">
+                <p><a href="#">視訊編碼與傳輸實驗室</a></p>
+                <p>陳彥霖、 楊士萱</p>
+                <p>科研大樓1323室</p>
+                <p>分機號碼4264</p>
+              </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 lab ">
+              <div class="pic">
+                <img src="../img/soft_test.jpg " class="rounded-circle" />
+              </div>
+              <div class="imformation">
+                <p><a href="#">軟體開發與測試實驗室</a></p>
+                <p>陳偉凱</p>
+                <p>科研大樓1421室</p>
+                <p>分機號碼4265</p>
+              </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 lab ">
+              <div class="pic">
+                <img src="../img/voice.jpg " class="rounded-circle"/>
+              </div>
+              <div class="imformation">
+                <p><a href="#">音訊信號處理實驗室</a></p>
+                <p>尤信程</p>
+                <p>科研大樓1421室</p>
+                <p>分機號碼4274</p>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+         
+         <footer id="footer" class="bg-dark text-white container-fluid">
+
+                   <div class="row justify-content-center align-items-center ">
+                      <div class="d-none d-lg-block">
+                      <div class="p-4 col">　聯絡電話：(02)2771-2171 轉 4200</div>
+                      </div>
+                      <div class="p-2 col-xs-12"><a href="#"><i class="far fa-envelope fa-2x"></i></a></div>
+                       <div class="p-2 col-xs-12"><a href="#"><i class="fab fa-instagram fa-2x"></i></a></div>
+                       <div class="p-2 col-xs-12"><a href="#"><i class="fab fa-facebook-square fa-2x"></i></i></a></div>
+
+           </footer>
+         </div>
+      
+     
+   </body>
+</html>
