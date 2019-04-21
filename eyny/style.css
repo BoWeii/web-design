@@ -1,0 +1,210 @@
+body {
+  width: 1280px;
+  height: 1653px;
+  background: #e0e0e0;
+  margin: 0 0;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  width: 1280px;
+  height: 94px;
+  background: #ffffff;
+}
+
+.selectpicker {
+  align-content: center;
+  font-size: 16px;
+  padding: 3px;
+  margin-right: 5px;
+}
+.form {
+  margin-left: 50px;
+}
+header .pic {
+  width: 220px;
+}
+.form-group {
+  margin-top: 50%;
+}
+.search {
+  margin-top: 38px;
+  width: 290px;
+  margin-right: 5px;
+}
+header .but {
+  margin-top: 34px;
+}
+header .but .butt {
+  padding: 4px;
+  font-size: 16px;
+  height: 33px;
+  border-radius: 7px;
+  width: 54px;
+}
+header .but h3 {
+  margin: 0 0;
+  font-size: 15px;
+}
+.profile {
+  margin-top: 40px;
+  height: 30px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.profile h3 {
+  margin-right: 15px;
+  margin-top: 0;
+  cursor: pointer;
+}
+.line {
+  margin-right: 15px;
+  border-left: solid #000000 1px;
+}
+
+.movie {
+  width: 1280px;
+  height: 526px;
+  background: #000000;
+  margin: 0 0;
+}
+.movie .main {
+  margin-right: 250px;
+  margin-left: 250px;
+  width: 780px;
+  height: 526px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.movie .main .start img {
+  margin-left: 10px;
+  width: 33px;
+  height: 33px;
+}
+.others {
+  width: 1040px;
+  height: 963px;
+  margin-left: 80px;
+  margin-right: 120px;
+}
+.others .video-title h3 {
+  font-size: 18px;
+  margin-right: 10px;
+  height: 20px;
+}
+.user {
+  width: 650px;
+  height: 268px;
+  margin: 20 20;
+  background: #ffffff;
+  padding: 0 20;
+}
+.owner {
+  height: 35px;
+}
+.owner .but .butt {
+  padding: 4px;
+  font-size: 16px;
+  height: 25px;
+  width: 54px;
+}
+.owner .but {
+  margin-top: 14px;
+  display: flex;
+  height: 30px;
+  flex-direction: row;
+}
+.owner .but h3 {
+  margin: 0 0;
+  font-size: 15px;
+}
+.owner .video-title {
+  height: 40px;
+}
+.owner .video-title h3 {
+  margin-bottom: 0;
+}
+.personal .but .h3 {
+  margin: 0 0;
+  font-size: 15px;
+}
+.personal {
+  margin-top: 70px;
+}
+.personal .profil {
+  margin-right: 50px;
+}
+.personal .pic img {
+  width: 70px;
+  height: 70px;
+  margin-right: 5px;
+}
+.personal .but {
+  margin-top: 20px;
+}
+.personal .but .butt {
+  width: 90px;
+  height: 40px;
+}
+.commend {
+  width: 690px;
+  height: 140px;
+  margin: 20 20;
+  background: #ffffff;
+}
+.right {
+  margin-top: 20px;
+}
+.right .relative-video {
+  background: #ffffff;
+  width: 372px;
+  height: 869px;
+  margin-top: 0;
+}
+.relative-video .relative-title {
+  height: auto;
+}
+.relative-video .relative-title h3 {
+  text-align: center;
+  font-size: 30px;
+  padding-top: 20px;
+  margin: 0 0;
+}
+.relative-content {
+  width: 360px;
+  height: 126px;
+  margin: 10 5;
+}
+.right .relative-content .word {
+  margin: 5 5;
+}
+.right .relative-content .word h3 {
+  font-size: 14px;
+  margin: 0 0;
+  cursor: pointer;
+}
+.right .relative-content .word h2 {
+  font-size: 14px;
+  margin: 10 0;
+  color: #9b9999;
+}
+footer {
+  height: 70px;
+  width: 100%;
+  background: #ffffff;
+  margin: 0 0;
+}
+footer .foot {
+  justify-content: center;
+  height: 20px;
+  margin-top: 20px;
+  padding-top: 30px;
+}
+footer .foot h3 {
+  font-size: 15px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  height: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+}

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html >
+   <head>
+      
+      <title>國立台北科技大學 資訊工程系</title>
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- 引入 Bootstrap -->
+      
+      <link rel="stylesheet" type="text/css" href="../css/style.css">
+      <link href="../css/bootstrap.css" rel="stylesheet">
+      <script src="https://code.jquery.com/jquery.js"></script> 
+      <script src="../js/bootstrap.bundle.js"></script>
+      <script src="../js/main.js"></script>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.7/dist/css/bootstrap-select.min.css">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.7/dist/js/bootstrap-select.min.js"></script>
+   </head>
+   <body >
+         <div class ="container-fluid" >
+            <div class="row justify-content-center" style="background: url(../img/nav.jpeg) no-repeat center center /100%">
+               <header> 
+                  <div class="nav center-vertical">
+                     <div class="container">
+                        <div class="row justify-content-around mt-2"><!------改-------><a href="https://www.ntut.edu.tw/" style="text-decoration: none"><h1 class="school"><font face="Noto Sans TC">國立台北科技大學</font></h1></a></div><!------改------->
+                        <div class="row justify-content-center mb-2"><!------改-------><a href="./home_page.html" style="text-decoration: none"><h3 class="csie"><font face="Noto Sans TC">@資訊工程系</font></h3></a></div><!------改------->
+                        <div class="d-none d-lg-block">
+                        <div class="d-flex justify-content-between">
+                           <button type="button" class="btn btn-outline-dark" onclick="location.href='./Introduction.html'" >系所介紹</button>
+								<button type="button" class="btn btn-outline-dark" onclick="location.href='./teacher.html'">系所成員</button>
+								<button type="button" class="btn btn-outline-dark" onclick="location.href='./課程資訊.html'">課程資訊</button>
+								<button type="button" class="btn btn-outline-dark" onclick="location.href='./入學資訊.html'">招生訊息</button>
+								<button type="button" class="btn btn-outline-dark" onclick="location.href='./lab.html'">實驗室</button>
+                              </div>
+                        </div>
+                        </div>
+                  </div>
+               </header>
+            </div>
+         </div>
+         <button id="float-button" type="button" class="btn btn-dark d-lg-none" data-toggle="collapse" data-target="#float-button-data"><i class="fas fa-plus"></i></button>
+         <div id="float-button-data" class="collapse d-lg-none">
+            <!------改------->
+            <a href="#" id="about"><i class="fas fa-award fa-2x mb-4 menu"></i></a><br>
+            <a href="#" id="teacher"><i class="fas fa-user-tie fa-2x mb-4 menu"></i></a><br>
+            <a href="#" id="course"><i class="fas fa-book-open fa-2x mb-4 menu"></i></a><br>
+            <a href="#" id="info"><i class="fas fa-university fa-2x mb-4 menu"></i></a><br>
+            <a href="#" id="lab"><i class="fas fa-flask fa-2x mb-4 menu"></i></a><br>
+            <!------改------->
+         </div>
+          <div class ="container ">
+               <main>  
+                  <div class="row mt-3">
+                     <div>
+                  <form role="form">
+                     <div class="form-group" >
+                           <select class="selectpicker" id="select">
+                              <option value="107四技推甄">四技推甄入學</option>
+                              <option value="107登記分發">四技聯合登記分發入學</option>
+                              <option value="107高中生申請入學">高中生申請入學-電資學士班</option>
+                           </select>
+                  </form>
+                  </div>
+                  </div>
+                  <div class="table-responsive row" id="table-data" >
+                        <table class="table table-hover table-striped table-bordered" id="107四技推甄" >
+                           <thead>
+                           <tr>
+                              <th colspan="4">107學年度四技推甄入學</th>
+                           </tr>
+                           </thead>
+                           <tbody>
+                           <tr>
+                                 <th>甄試日期</th>
+                                 <td colspan="3">107年6月22日 (星期五)</td>
+                           </tr>
+                           
+                           <tr>
+                                 <th rowspan="5">招生名額</th>
+                                 <td colspan="2">電機與電子群電機類 </td>
+                                 <td>3名</td>
+                  
+                           </tr>
+                           <tr>
+                                 <td colspan="2">電機與電子群資電類</td>
+                                 <td>18名</td>
+                              </tr>
+                           <tr >
+                              <td colspan="2">低收或中低收入戶考生</td>
+                              <td>1名</td>
+                           </tr>
+                           <tr>
+                                 <td rowspan="2">離島考生</td>
+                                 <td>澎湖縣</td>
+                                 <td>1名</td>
+                              </tr>
+                              <tr>
+                                 <td>金門縣</td>
+                                 <td>1名</td>
+                              </tr>
+                              <tr>
+                                 <th>甄試方式</th>
+                                 <td  colspan="3">
+                                    <ol>
+                                       <li>歷年成績單(含名次證明)</li>
+                                       <li>自傳及讀書計畫（請註明申請姓名、申請系別，並陳述申請入學動機、學習規劃及專長培養，1000字以內）。</li>
+                                       <li>其他有利資料(專題及成果作品、語文能力、競賽成果及證照、社團參與及學生幹部、特殊才能及其他有利審查資料等)。</li>
+                                    </ol>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <th>配分及評分參考</th>
+                                 <td  colspan="3">
+                                    <ol>
+                                       <li>備審資料評分：專業70%（在學成績、專題、競賽獲獎、證照）、學習能力30%（學習 規劃及專長培養）。</li>
+                                       <li>面試評分：專業及問題解決能力70%、整體表現30%（表達、儀態、邏輯思維）。</li>
+                                       <li>所有文件於報名時一併繳交，不接受補件。</li>
+                                       <li>繳交資料概不退還，請自行備份留存。</li>
+                                    </ol>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                  
+                        <!--107學年度四技聯合登記分發入學資訊-->
+                        <table id="107登記分發" class="table table-hover table-bordered"  style="display:none;">
+                              <thead>
+                                 <tr>
+                                    <th colspan="4">107學年度四技聯合登記分發入學</th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                    <tr>
+                                          <th rowspan="8">招生名額</th>
+                                          <td colspan="2">電機與電子群電機類 </td>
+                                          <td>3名</td>
+                     
+                                    </tr>
+                                    <tr>
+                                       <td rowspan="7">電機與電子群資電類</td>
+                                       <td>一般生</td>
+                                       <td>11名</td>
+                                    </tr>
+                                    <tr>
+                                       <td>原住民生</td>
+                                       <td>1名</td>
+                                    </tr>
+                                    <tr>
+                                       <td>退伍軍人</td>
+                                       <td>1名</td>
+                                    </tr>
+                                    <tr>
+                                       <td>僑生</td>
+                                       <td>1名</td>
+                                    </tr>
+                                    <tr>
+                                       <td>境外科技人</td>
+                                       <td>1名</td>
+                                    </tr>
+                                    <tr>
+                                       <td>蒙藏生</td>
+                                       <td>1名</td>
+                                    </tr>
+                                       <tr>
+                                          <td>政府派外子女</td>
+                                          <td>1名</td>
+                                    </tr>
+                              </tbody>
+                           </table>
+                  
+                           <table id="107高中生申請入學" class="table table-hover table-bordered"  style="display:none;">
+                                 <thead>
+                                    <tr>
+                                       <th colspan="10">107學年度 高中生申請入學-電資學士班</th>
+                                    </tr>
+                                    </thead>
+                                 <tr>
+                                    <td rowspan="2">校系組資料</td>
+                                    <td colspan="3" rowspan="2">國立臺北科技大學<br>電資學士班</td>
+                                    <td colspan="2" rowspan="2">學科能力測驗成績採計方式</td>
+                                    <td rowspan="2">第二階段複試項目</td>
+                                    <td colspan="3">甄試總成績計算方式及同分參酌順序</td>
+                                 </tr>
+                                 <tr>
+                                    <td>甄試全部評分項目</td>
+                                    <td>佔總成績比例</td>
+                                    <td>同分參酌順序</td>
+                                 </tr>
+                                 <tr>
+                                    <td rowspan="2">志願代碼</td>
+                                    <td rowspan="2">104013</td>
+                                    <td rowspan="2">招生名額</td>
+                                    <td rowspan="2">66</td>
+                                    <td>科目</td>
+                                    <td>權重</td>
+                                    <td rowspan="6">書面資料審查</td>
+                                    <td>書面資料審查</td>
+                                    <td>50%</td>
+                                    <td>1</td>
+                                 </tr>
+                                 <tr>
+                                    <td>國文</td>
+                                    <td>*1.00</td>
+                                    <td>學科能力測驗成績&nbsp;</td>
+                                    <td>50%</td>
+                                    <td>2</td>
+                                 </tr>
+                                 <tr>
+                                    <td rowspan="2">性別要求</td>
+                                    <td rowspan="2">未要求</td>
+                                    <td rowspan="2">預計複試人數</td>
+                                    <td rowspan="2">330</td>
+                                    <td>英文</td>
+                                    <td>*1.00</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                 </tr>
+                                 <tr>
+                                    <td>數學</td>
+                                    <td>*1.00</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                 </tr>
+                                 <tr>
+                                    <td rowspan="2">寄發第二階段複試通知</td>
+                                    <td rowspan="2">詳見「複試說明</td>
+                                    <td rowspan="2">第二階段複試費</td>
+                                    <td rowspan="2">800</td>
+                                    <td>社會</td>
+                                    <td>&nbsp;---</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                 </tr>
+                                 <tr>
+                                    <td>自然</td>
+                                    <td>*1.00</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                 </tr>
+                                 <tr>
+                                    <td>繳交資料收件截止（郵戳為憑）</td>
+                                    <td>107/04/02</td>
+                                    <td rowspan="2">繳交資料</td>
+                                    <td colspan="7" rowspan="2">
+                                       應繳資料(請詳閱招生簡章總則第二階段複試資格審查必繳資料規定)<br>
+                                       1.學歷證件影本(必繳)<br>
+                                       2.歷年成績單正本﹝排名/班級人數/成績百分比﹞﹝應屆生應附在校前五學期成績﹞(必繳)<br>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                   <td>第二階段複試日期</td>
+                                   <td>107/04/02</td>
+                                 </tr>
+                                 <tr>
+                                   <td>寄發成績單日期</td>
+                                   <td>107/04/19</td>
+                                   <td rowspan="2">複試說明</td>
+                                   <td colspan="7" rowspan="2">
+                                       1.學習及專業能力（60%）：在校成績單（附班級排名）、各類證照及競賽作品成果等足以證明學習及專業能力之資料。<br>
+                                       2.發展潛力（40%）：自傳及讀書計畫等足以證明發展潛力之相關資料。<br>
+                                       3.本校不另寄複試報名通知，通過第一階段篩選學生，請至本校首頁點選「招生訊息」/「高中生申請入學」/「最新消息」項下列印複試報名注意事項、複試報名表及專用信封封面。<br>
+                                       4.採書面資料審查，申請學生不必到校。<br>
+                                   </td>
+                                 </tr>
+                                 <tr>
+                                   <td>成績複查截止日期（郵戳為憑）</td>
+                                   <td>107/04/20</td>
+                                 </tr>
+                                 <tr>
+                                   <td>公告錄取名單日期</td>
+                                   <td>107/04/27</td>
+                                   <td rowspan="2">備註</td>
+                                   <td colspan="7" rowspan="2">本班學生大一、大二不分系，大三起依學生興趣選定電資學院所屬之電機工程系、電子工程系、資訊工程系、光電工程系等任一系為主修。</td>
+                                 </tr>
+                                 <tr>
+                                   <td>是否採備取制</td>
+                                   <td>是</td>
+                                 </tr>
+                              </table>
+                  
+                  </div>
+                </main>
+         </div>
+         <div>
+         
+         <footer id="footer" class="bg-dark text-white container-fluid">
+
+                   <div class="row justify-content-center align-items-center ">
+                      <div class="d-none d-lg-block">
+                      <div class="p-4 col">　聯絡電話：(02)2771-2171 轉 4200</div>
+                      </div>
+                      <div class="p-2 col-xs-12"><a href="mailto:wwwcsie@ntut.edu.tw"><i class="far fa-envelope fa-2x foot"></i></a></div>
+                      <div class="p-2 col-xs-12"><a href="https://www.instagram.com/ntutcsientut/?hl=zh-tw" target="_blank"><i class="fab fa-instagram fa-2x foot"></i></a></div>
+                      <div class="p-2 col-xs-12"><a href="https://www.facebook.com/ntutcsieFB/" target="_blank"><i class="fab fa-facebook-square fa-2x foot"></i></i></a></div>
+           </footer>
+         </div>
+      
+     
+   </body>
+</html>
