@@ -95,10 +95,8 @@ header .but h3 {
 }
 
 .user {
-  width: 85%;
+  width: auto;
   height: auto;
-  margin-left: 20px;
-  margin-top: 20px;
   background: #ffffff;
   padding: 0 20;
 }
@@ -176,9 +174,8 @@ header .but h3 {
 }
 
 .commend {
-  width: 85%;
+  width: auto;
   height: 140px;
-  margin-left: 20px;
   margin-top: 20px;
   background: #ffffff;
   padding: 0 20;
@@ -258,19 +255,27 @@ footer .foot h3 {
 
   cursor: pointer;
 }
-@media only screen and (min-width: 0px) and (max-width: 770px) {
+.others .left {
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.others .right {
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+@media only screen and (min-width: 0px) and (max-width: 750px) {
   .others .left {
-    min-width: 510;
-    flex: 3;
+    min-width: 335px;
+    flex: 1;
   }
   .others .right {
-    flex: 2;
-    margin-top: 20px;
-    margin-right: 20px;
-    margin-left: 20px;
+    flex: 1;
+    min-width: 335px;
   }
 }
-@media only screen and (min-width: 770px) {
+@media only screen and (min-width: 750px) {
   .others .left {
     min-width: 550px;
     flex: 4;
