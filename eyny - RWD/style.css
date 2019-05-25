@@ -258,9 +258,9 @@ footer .foot h3 {
 
   cursor: pointer;
 }
-@media only screen and (min-width: 0px) and (max-width: 540px) {
+@media only screen and (min-width: 0px) and (max-width: 770px) {
   .others .left {
-    min-width: 300;
+    min-width: 510;
     flex: 3;
   }
   .others .right {
@@ -270,13 +270,13 @@ footer .foot h3 {
     margin-left: 20px;
   }
 }
-@media only screen and (min-width: 540px) {
+@media only screen and (min-width: 770px) {
   .others .left {
-    min-width: 452;
-    flex: 3;
+    min-width: 550px;
+    flex: 4;
   }
   .others .right {
-    flex: 2;
+    flex: 3;
     margin: 20 20;
   }
 }
