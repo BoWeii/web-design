@@ -170,6 +170,7 @@ header .but h3 {
 }
 .personal .but {
   width: auto;
+  height: auto;
   margin-top: 20px;
 }
 .personal .but .butt {
