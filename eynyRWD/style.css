@@ -100,6 +100,7 @@ header .but h3 {
   background: #ffffff;
   padding: 0 20;
   padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 .others {
   margin: 20, 20;
@@ -111,6 +112,7 @@ header .but h3 {
 .owner {
   display: flex;
   flex-direction: column;
+  height: auto;
 }
 .owner h3 {
   flex: 1;
@@ -149,6 +151,7 @@ header .but h3 {
 .personal {
   flex-wrap: wrap;
   flex: 1;
+  height: auto;
   margin-top: 20px;
   margin-bottom: 5%;
   display: flex;
@@ -177,7 +180,6 @@ header .but h3 {
 .commend {
   width: auto;
   height: 140px;
-  margin-top: 20px;
   background: #ffffff;
   padding: 0 20;
 }
