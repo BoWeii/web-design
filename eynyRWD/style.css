@@ -96,7 +96,6 @@ header .but h3 {
 
 .user {
   width: auto;
-  height: auto;
   background: #ffffff;
   padding: 0 20;
   padding-bottom: 20px;
@@ -260,7 +259,6 @@ footer .foot h3 {
   cursor: pointer;
 }
 .others .left {
-  height: auto;
   margin-top: 20px;
   margin-right: 20px;
   margin-left: 20px;
