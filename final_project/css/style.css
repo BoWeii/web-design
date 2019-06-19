@@ -1,0 +1,401 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+body {
+  margin: 0;
+  height: 100%;
+}
+.card {
+  margin-bottom: 48px;
+  min-height: 615px;
+}
+.amber-text {
+  color: #ffc107 !important;
+}
+.backgroundImage::before {
+  content: "";
+  background-attachment: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  display: block;
+  background-image: url("../img/bk.jpg");
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-filter: blur(7px);
+  -moz-filter: blur(7px);
+  -o-filter: blur(7px);
+  -ms-filter: blur(7px);
+  filter: blur(7px);
+
+  height: calc(100vh - 154px);
+}
+
+.backgroundImage {
+  height: calc(100vh - 154px);
+  left: 0;
+  top: 0;
+  right: 0;
+  position: relative;
+}
+.content {
+  padding: 16px;
+  min-height: calc(100vh - 128px);
+  /* position: absolute; */
+}
+/*背景圖案*/
+.background-image {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: block;
+  background-image: url("../img/bk.jpg");
+  width: 100%;
+  background-size: cover;
+  height: calc(100vh);
+  background-repeat: no-repeat;
+  -webkit-filter: blur(7px);
+  -moz-filter: blur(7px);
+  -o-filter: blur(7px);
+  -ms-filter: blur(7px);
+  filter: blur(7px);
+}
+/*背景圖案*/
+.top-container {
+  background-color: #4d73af;
+  padding: 10px 0px;
+  text-align: center;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.top-container h1 {
+  color: white;
+}
+.header {
+  padding: 20px 20px;
+  background: #d4ecf7;
+  color: #f1f1f1;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 5px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+header h1 {
+  letter-spacing: 20px;
+  color: black;
+}
+header h3 {
+  color: black;
+}
+header .nav button {
+  border-radius: 30px;
+  margin-top: 100px;
+  font-family: "Microsoft YaHei";
+}
+
+.center-vertical {
+  position: relative;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+}
+#float-button {
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+#float-button-data {
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+}
+
+#float-button-data button {
+  border-radius: 50%;
+}
+
+html {
+  font-size: 16px;
+}
+
+main {
+  min-height: 75vh;
+  margin-bottom: 10vh;
+  padding-left: 5vh;
+  padding-right: auto;
+}
+#footer {
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+}
+
+@media screen and (min-width: 1500px) and (max-height: 999px) {
+  header {
+    max-height: 50vh;
+    height: 1000px;
+  }
+  .school {
+    font-size: 5rem;
+  }
+  .csie {
+    font-size: 3rem;
+  }
+
+  header .nav button {
+    min-width: 130px;
+    min-height: 50px;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 1500px) and (min-height: 1000px) {
+  header {
+    max-height: 50vh;
+    height: 800px;
+  }
+  .school {
+    font-size: 6rem;
+  }
+  .csie {
+    font-size: 4rem;
+  }
+  header .nav button {
+    min-width: 130px;
+    min-height: 50px;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-height: 500px) {
+  header {
+    max-height: 60vh;
+    height: 800px;
+  }
+  .school {
+    font-size: 6rem;
+  }
+  .csie {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 1499px) {
+  .school {
+    font-size: 2.8rem;
+  }
+  .csie {
+    font-size: 2rem;
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 1200px) and (max-height: 800px) {
+  .school {
+    margin-top: 6vh;
+    font-size: 2.8rem;
+  }
+  .csie {
+    font-size: 2rem;
+    margin-top: 40px;
+  }
+  header .nav button {
+    margin-bottom: 6vh;
+  }
+}
+@media screen and (max-width: 599px) and (min-height: 600px) {
+  .school {
+    margin-top: 7vh;
+    font-size: 1.2rem;
+  }
+  .csie {
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-bottom: 10vh;
+  }
+}
+@media screen and (max-width: 599px) and (max-height: 400px) {
+  header {
+    max-height: 20vh;
+    height: 200px;
+  }
+  .school {
+    display: none;
+  }
+  .csie {
+    font-size: 2rem;
+    margin-bottom: 15vh;
+  }
+}
+
+@media screen and (max-width: 360px) and (min-height: 400px) {
+  .school {
+    font-size: 0.9rem;
+  }
+  .csie {
+    font-size: 0.8rem;
+    margin-top: 5px;
+    margin-bottom: 8vh;
+  }
+  table {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-height: 1000px) and (max-width: 1499px) {
+  header {
+    max-height: 35vh;
+    height: 800px;
+  }
+}
+
+@media screen and (min-height: 1000px) and (max-width: 800px) {
+  header {
+    max-height: 30vh;
+    height: 800px;
+  }
+}
+@media screen and (max-height: 999px) and (max-width: 599px) {
+  header {
+    max-height: 20vh;
+    height: 500px;
+  }
+}
+
+i.menu {
+  color: #343a40;
+}
+i.foot {
+  color: whitesmoke;
+}
+
+a:hover {
+  background-color: Transparent;
+}
+/*---all class team---*/
+.team {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.bord {
+  margin: 20px 20px;
+  border-radius: 30px;
+  border: solid #1d84f2 3px;
+  background-color: white;
+}
+.team .group-num font {
+  font-size: 23px;
+  padding-right: 5px;
+  padding-left: 5px;
+  font-weight: bold;
+}
+.team .group-num {
+  flex: 1;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.team .pic {
+  justify-content: center;
+  flex: 7;
+  margin-bottom: 10px;
+}
+.team .pic img {
+  width: 200px;
+  height: 200px;
+}
+.team .imformation {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin-bottom: 10px;
+}
+.team .imformation .member {
+  /* width: 175px; */
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  justify-content: space-between;
+  display: flex;
+}
+.team .imformation .member .child {
+  flex-direction: column;
+  margin-left: 20px;
+  margin-right: 20px;
+  flex: 1;
+}
+
+.imformation {
+  justify-content: center;
+}
+.team .imformation p {
+  margin-bottom: 5px;
+}
+
+/*---all class team---*/
+.hbk {
+  background: url(../img/bk.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+}
+.hbk {
+  opacity: 0.2;
+}
+body {
+  box-sizing: border-box;
+}
+
+.teacher .word-space h4 {
+  color: #007bff;
+}
+
+.teacher {
+  margin-bottom: 30px;
+  background: url(../img/tea6.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  margin-top: 30px;
+}
+.teacher .word-space {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.teacher .pic-space {
+  margin-left: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 149px;
+  width: 148px;
+}
+.teacher .word-space b {
+  margin-right: 10px;
+}
+
+.teacher .word {
+  width: 376px;
+}
+.home {
+  margin-top: 30px;
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase.js"></script>
+    <!-- 引入 boostrap 函式庫 -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- 引入 rate 函式庫 -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <!-- 引入 firebase 函式庫 -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase.js"></script>
+    <!-- <script type="text/javascript" src="../js/main.js"></script> -->
+    <script type="text/javascript" src="../js/sidebar.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/sidebar.css" />
+    <link rel="stylesheet" type="text/css" href="../css/setting.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <script type="text/javascript" src="../js/firebase.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/all-team.js"></script>
+    <title>設定</title>
+  </head>
+  <body>
+    <div id="bar" class="shadow-lg p-3 mb-5 bg-dark">OOP CourseWeb</div>
+    <div id="mySidenav" class="sidenav shadow-lg">
+      <a class="p-5" id="profile">
+        <div id="photo" class="ratio img-responsive img-circle"></div>
+      </a>
+      <a href="javascript:void(0)" class="closebtn" id="close">&times;</a>
+      <a><span id="id" class="idtext"></span></a>
+
+      <a href="./comment.html">課程介紹</a>
+      <a href="./progress.html">專案進度</a>
+      <a href="./projectgoal.html">編輯專案</a>
+      <a href="./all-team.html">班級所有團隊</a>
+      <a href="./chat.html">留言板</a>
+      <a href="./setting.html">設定</a>
+      <a href="./index.html" id="logout"
+        ><img id="imgLogout" src="../img/logout.png"
+      /></a>
+    </div>
+
+    <button id="open" class="hamburger-menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+    <div id="main" class="vertical-center">
+      <div class="container  mt-5">
+        <div class="row" id="class-row">
+          <div class="col-sm-12  col-lg-4 team " id="team0">
+            <div class=" shadow-lg" id="boad">
+              <div class="group-num" id="groupNum">
+                <font face="Noto Sans TC" id="groupNumData">範例</font>
+              </div>
+              <div class="pic" id="pic">
+                <img
+                  src="../img/int.jpg "
+                  class="rounded-circle"
+                  id="pic-data"
+                />
+              </div>
+              <div class="imformation" id="imformation">
+                <div class="member-child" id="member-child">
+                  <p id="student-num" style="  margin-bottom: 0px; height:20px">
+                    106590021
+                  </p>
+                  <p id="student-name" style=" margin-bottom: 0px;height:28px">
+                    王柏偉
+                  </p>
+                </div>
+                <p id="project-name" style="flex:1;">專案 : 混水摸魚</p>
+                <p id="demo1" style="flex:1;">Demo1:A+</p>
+                <p id="demo2" style="flex:1;">Demo1:B+</p>
+                <span id="rateMe">
+                  <i
+                    id="star-1"
+                    class="fas fa-star py-2 px-1 rate-popover"
+                    data-index="0"
+                    data-html="true"
+                    data-toggle="popover"
+                    data-placement="top"
+                    title="Very bad"
+                  ></i>
+                  <i
+                    id="star-2"
+                    class="fas fa-star py-2 px-1 rate-popover"
+                    data-index="1"
+                    data-html="true"
+                    data-toggle="popover"
+                    data-placement="top"
+                    title="Poor"
+                  ></i>
+                  <i
+                    id="star-3"
+                    class="fas fa-star py-2 px-1 rate-popover"
+                    data-index="2"
+                    data-html="true"
+                    data-toggle="popover"
+                    data-placement="top"
+                    title="OK"
+                  ></i>
+                  <i
+                    id="star-4"
+                    class="fas fa-star py-2 px-1 rate-popover"
+                    data-index="3"
+                    data-html="true"
+                    data-toggle="popover"
+                    data-placement="top"
+                    title="Good"
+                  ></i>
+                  <i
+                    id="star-5"
+                    class="fas fa-star py-2 px-1 rate-popover"
+                    data-index="4"
+                    data-html="true"
+                    data-toggle="popover"
+                    data-placement="top"
+                    title="Excellent"
+                  ></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function test() {
+        var teamRef = firebase.database().ref("teams");
+        console.log("press");
+        teamRef.push({ number: "30679", name: "bowei", project: "fuck_me" });
+      }
+    </script>
+    <script src="../js/rating.js"></script>
+  </body>
+</html>

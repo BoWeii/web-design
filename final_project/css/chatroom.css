@@ -1,0 +1,19 @@
+.card{
+    height:80vh;
+    border: none;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+::-webkit-scrollbar-track {
+
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+  border-width: 2px;
+	background-color: #555;
+}
