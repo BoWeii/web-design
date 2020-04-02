@@ -73,16 +73,7 @@ $(document).ready(function() {
         loginUser = firebase.auth().currentUser;
         console.log("登入使用者為", loginUser.email);
         uid = loginUser.uid;
-        firebase
-          .database()
-          .ref("users/" + loginUser.uid + "/projectgoal")
-          .set({
-            arefVideo: "",
-            class: "",
-            git: "",
-            projectName: "",
-            comment: ""
-          });
+   
         firebase
           .database()
           .ref("users/" + loginUser.uid)
@@ -92,7 +83,18 @@ $(document).ready(function() {
             name: $("#name").val()
           })
           .then(function() {
-            window.location.href = "../html/progress.html";
+            window.location.href = "./html/progress.html";
+          });
+      
+           firebase
+          .database()
+          .ref("users/" + loginUser.uid + "/projectgoal")
+          .set({
+            arefVideo: "",
+            class: "",
+            git: "",
+            projectName: "",
+            comment: ""
           });
       })
       .catch(function(error) {
@@ -209,16 +211,16 @@ $(document).ready(function() {
   //----------------如果網頁第一次要載入值 寫在這裡----------------------
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-      if (location.pathname == "/html/progress.html") refreshProgress();
-      console.log("test");
+      if (location.pathname == "/webfinal/html/progress.html") refreshProgress();
+      console.log("in refresh");
+      all_team();
+      console.log("after allteeam");
       getId();
       getPhoto();
       chat();
-      all_team();
+      
       getprojectgoal();
       getcontent();
-      storedata();
-      deletedata();
       checkID();
     }
   });
@@ -267,7 +269,7 @@ $(document).ready(function() {
       .then(function(url) {
         document.getElementById("photo").style.cssText =
           "background-image:url( " + url + ");";
-        if (location.pathname == "/html/setting.html")
+        if (location.pathname == "/webfinal/html/setting.html")
           document.getElementById("upload_img").style.cssText =
             "background-image:url( " + url + ");";
       })
@@ -318,6 +320,70 @@ $(document).ready(function() {
           // An error happened.
         });
     }
+  });
+  
+  
+   $("#modifyproject").click(function() {
+   
+  var nameElement = document.getElementById("projectName");
+  var name = nameElement.value;
+  var arefElement = document.getElementById("arefVideo");
+  var aref = arefElement.value;
+  var classElement = document.getElementById("class");
+  var cls = classElement.value;
+  var commentElement = document.getElementById("comment");
+  var comment = commentElement.value;
+  var gitElement = document.getElementById("gitaref");
+  var git = gitElement.value;
+  firebase
+    .database()
+    .ref("users/" + firebase.auth().currentUser.uid + "/projectgoal")
+    .set({
+      projectName: name,
+      arefVideo: aref,
+      class: cls,
+      comment: comment,
+      git: git
+    });
+    alert("已儲存");
+  });
+$("#clearproject").click(function() {
+  var nameElement = document.getElementById("projectName");
+  nameElement.value = "";
+  var arefElement = document.getElementById("arefVideo");
+  arefElement.value = "";
+  var classElement = document.getElementById("class");
+  classElement.value = "";
+  var commentElement = document.getElementById("comment");
+  commentElement.value = "";
+  var gitElement = document.getElementById("gitaref");
+  gitElement.value = "";
+  firebase
+    .database()
+    .ref("users/" + firebase.auth().currentUser.uid + "/projectgoal")
+    .remove();
+   alert("已清除");
+  });
+    $("#a").click(function() {
+      
+    var commentElement = document.getElementById("teacher_comment");
+    var comment = commentElement.value;
+    firebase
+      .database()
+      .ref("COMMENT/")
+      .set({
+        comment: comment
+      });
+        alert("成功");
+  });
+ $("#b").click(function() {
+    var commentElement = document.getElementById("teacher_comment");
+    commentElement.value = "";
+    firebase
+      .database()
+      .ref("/COMMENT")
+      .remove();
+     alert("已刪除公告");
   });
   //---------------------------------------------------------------------------
 
@@ -430,38 +496,33 @@ $(document).ready(function() {
       .database()
       .ref("COMMENT/comment")
       .once("value", function(snapshot) {
-        var teacher_commentElement = document.getElementById("teacher_comment");
+        var teacher_
+        = document.getElementById("teacher_comment");
         var data = snapshot.val();
+         $("#comm")
+            .html(snapshot.val())
+            .css("color","black");
+        if (adminUID == firebase.auth().currentUser.uid) {
+          
+        $("#comm").css("display", "none");
+        }
+      
+         
+          
         teacher_commentElement.value = data;
       });
-  }
-  function storedata() {
-    var commentElement = document.getElementById("teacher_comment");
-    var comment = commentElement.value;
-    firebase
-      .database()
-      .ref("COMMENT/")
-      .set({
-        comment: comment
-      });
-  }
-  function deletedata() {
-    var commentElement = document.getElementById("teacher_comment");
-    commentElement.value = "";
-    firebase
-      .database()
-      .ref("/COMMENT")
-      .remove();
   }
 
   function checkID() {
     const adminUID = "ckhZgIhh7RUPKWaRtSx4k3okia02";
     firebase.auth().onAuthStateChanged(function(user) {
-      // alert(firebase.auth().currentUser.uid);
       if (adminUID != firebase.auth().currentUser.uid) {
-        $("#storebtn").addClass("comment_btdisplay");
-        $("#deletebtn").addClass("comment_btdisplay");
-        $("#teacher_comment").attr("disabled", true);
+        $("#a").addClass("comment_btdisplay");
+        $("#b").addClass("comment_btdisplay");
+        $("#teacher_comment").css("display", "none");
+      }
+      if (adminUID == firebase.auth().currentUser.uid) {
+        $("#comm").css("display", "none");
       }
     });
   }
@@ -478,7 +539,7 @@ $(document).ready(function() {
     var name;
     $("#messageInput").keypress(function(e) {
       console.log("press");
-      if (e.keyCode == 13) {
+      if (e.keyCode == 13 && $messageField.val().replace(/(^s*)|(s*$)/g, "").length != 0) {
         loginUser = firebase.auth().currentUser;
         firebase
           .database()
@@ -492,8 +553,7 @@ $(document).ready(function() {
             $messageField.val("");
           });
 
-        console.log(name);
-        console.log(message);
+        
       }
     });
 
@@ -513,12 +573,14 @@ $(document).ready(function() {
             message +
             "</span></div>"
         );
-      else
+      else{
         $(".messesge").append(
-          '<div class=" justify-content-end row p-2"><span class=" bg-primary p-2 rounded text-light">' +
+          '<div class="me justify-content-end row p-2"><span class="bg-primary p-2 rounded text-light">' +
             message +
             "</span></div>"
         );
+  
+      }
       $(".card-body").scrollTop($(".card-body")[0].scrollHeight);
     });
   }
@@ -543,6 +605,7 @@ $(document).ready(function() {
             var comment = childSnapshot.val().projectgoal.comment;
             var git = childSnapshot.val().projectgoal.git;
             var projectName = childSnapshot.val().projectgoal.projectName;
+            
             if (
               class2 != "" &&
               arefVideo != "" &&
@@ -550,6 +613,7 @@ $(document).ready(function() {
               projectName != "" &&
               git != ""
             ) {
+              
               var $row = $("#class-row");
               var $newBoad = $("<div></div>");
               $newBoad.addClass("shadow-lg");

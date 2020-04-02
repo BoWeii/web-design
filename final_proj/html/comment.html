@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -39,11 +40,14 @@
     <script type="text/javascript" src="../js/sidebar.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/sidebar.css" />
     <link rel="stylesheet" type="text/css" href="../css/setting.css" />
+    <link rel="stylesheet" type="text/css" href="../css/comment.css" />
 
     <title>設定</title>
   </head>
 
-  <body>
+<body>
+
+    <!--從這複製-->
     <div id="bar" class="shadow-lg p-3 mb-5 bg-dark">OOP CourseWeb</div>
     <div id="mySidenav" class="sidenav shadow-lg">
       <a class="p-5" id="profile">
@@ -52,11 +56,11 @@
       <a href="javascript:void(0)" class="closebtn" id="close">&times;</a>
       <a><span id="id" class="idtext"></span></a>
 
-      <a href="./comment.html">課程介紹</a>
+      <a href="./comment.html">課程公告</a>
       <a href="./progress.html">專案進度</a>
       <a href="./projectgoal.html">編輯專案</a>
       <a href="./all-team.html">班級所有團隊</a>
-      <a href="./chat.html">留言板</a>
+      <a href="./chat.html">討論區</a>
       <a href="./setting.html">設定</a>
       <a href="./index.html" id="logout"
         ><img id="imgLogout" src="../img/logout.png"
@@ -69,63 +73,31 @@
       <span class="icon-bar"></span>
     </button>
 
-    <div id="main" class="vertical-center">
-      <div class="container shadow-lg mt-5">
-        <div class="row">
-          <div class="col-lg-6 col-md-6 col-sm-6">
-            <div class="change container  pl-5 pr-5 pb-5">
-              <div>
-                <div class="pt-5">
-                  <h1>更新密碼</h1>
+    <div id="main">
+        <!--到這<div id="main">-->
+        <!--main裡面寫內容-->
+        <div class="container shadow-lg  p-5 mt-5">
+            <label for="comment"><h1>助教公告</h1></label>
+            <div class="row">
+            <span id="comm" ></span>
+            <textarea class="form-control" rows="10" id="teacher_comment"></textarea>
+            </div>
+            <br><div style="display: flex;flex-direction: row;justify-content: flex-end;"><button
+type="button"
+class="btn btn-primary btn-lg "
+id="a"
+ style="justify-content: end; margin-right:10px; border-radius: 5rem;"
+>
+發布
+</button>
+<button
+type="button"
+class="btn btn-primary btn-lg" style="justify-content: end; margin-right:10px; border-radius: 5rem;"
+id="b"
+>
+刪除
+</button>
                 </div>
+</body>
 
-                <div class="form-group  mt-5">
-                  <label for="newpassword">新密碼</label>
-                  <input
-                    type="password"
-                    class="form-control"
-                    id="newpassword"
-                    placeholder="Password"
-                  />
-                </div>
-                <div class="form-group mb-5">
-                  <label for="newpassword2">再次輸入密碼</label>
-                  <input
-                    type="password"
-                    class="form-control"
-                    id="newpassword2"
-                    placeholder="Password"
-                  />
-                </div>
-                <span class="message"></span>
-                <button id="pass" type="submit" class="btn btn-primary">
-                  確認更改
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6 col-sm-6 p-5">
-            <h1 class="mb-4">更換新頭貼</h1>
-            <div id="file" class="text-center">
-              <label
-                id="upload_img"
-                class="shadow ratio img-responsive img-circle"
-                style="cursor: pointer;"
-              >
-                <input
-                  id="upload"
-                  style="display:none;"
-                  type="file"
-                  accept="image/*"
-                />
-              </label>
-              <button id="confirm" type="submit" class="btn btn-primary mt-5">
-                確認上傳
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
 </html>
